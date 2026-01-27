@@ -27,22 +27,19 @@ Creates a new SPL token mint with the following configuration:
 - Freeze authority: None
 - Decimals: 9
 
-
 ### 2. Add Token Metadata (`spl_metadata.ts`)
 
 Adds Metaplex metadata to the token:
 - Name: "leo_kevred"
 - Symbol: "LKE"
-- URI: [https://gray-familiar-wombat-195.mypinata.cloud/ipfsbafkreiftaydfqgjhtgchpmdm6tzznp577wsgftzsjyttky5qt7mag5zmcy]
+- URI: https://gray-familiar-wombat-195.mypinata.cloud/ipfs/bafkreiftaydfqgjhtgchpmdm6tzznp577wsgftzsjyttky5qt7mag5zmcy
 - Seller fee: 0%
-
 
 ### 3. Mint Tokens (`spl_mint.ts`)
 
 Mints 100 tokens to your Associated Token Account (ATA):
 - Creates ATA if it doesn't exist
 - Mints 100 tokens (100 * 10^9 base units)
-
 
 **Mint Transaction**: [`5rBBk2eAh3fH7QqAgUqnuyswdhgEY68zxYyG1aZ83aqVbkXmvvvPNSkRuA5Voh2LE2ktXT6sgyiJfJzbk32iUCAJ`](https://explorer.solana.com/tx/5rBBk2eAh3fH7QqAgUqnuyswdhgEY68zxYyG1aZ83aqVbkXmvvvPNSkRuA5Voh2LE2ktXT6sgyiJfJzbk32iUCAJ?cluster=devnet)
 
@@ -52,7 +49,6 @@ Transfers 10 tokens to another wallet:
 - Recipient: `8RYEWyZGhmUDqwuQNqdFEdti3U6AU1ggo3t8TurjHQsw`
 - Amount: 10 tokens (10 * 10^9 base units)
 - Creates recipient ATA if needed
-
 
 ## Setup
 
