@@ -22,7 +22,7 @@ const amount = 10n *token_decimals; // I want to transfer 10 tokens
 
 (async () => {
     try {
-        // Get the token account of the fromWallet address, and if it does not exist, create 
+        // Get the token account of the fromWallet address, and if it does not exist, create it
         const fromAta = await getOrCreateAssociatedTokenAccount(
             connection,
             keypair,
