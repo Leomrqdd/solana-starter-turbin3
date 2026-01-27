@@ -54,7 +54,7 @@ Transfers 10 tokens to another wallet:
 
 ```bash
 cd ts
-npm install
+yarn install
 ```
 
 ## Dependencies
