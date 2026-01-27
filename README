@@ -1,0 +1,73 @@
+# SPL Token Creation - leo_kevred (LKE)
+
+Complete workflow for creating, minting, and transferring an SPL token on Solana Devnet.
+
+## Token Information
+
+- **Name**: leo_kevred
+- **Symbol**: LKE
+- **Mint Address**: `DpZ3H6iCty6GQxT5zC84jxBSN7KnFH5oDVHcVWyEisEo`
+- **Decimals**: 9
+- **Network**: Devnet
+
+## Screenshots
+
+### Phantom Wallet
+![Token in Phantom Wallet](token_phantom.png)
+
+### Solscan Explorer
+![Token on Solscan](token_solscan.png)
+
+## Workflow
+
+### 1. Initialize Token Mint (`spl_init.ts`)
+
+Creates a new SPL token mint with the following configuration:
+- Mint authority: Your wallet
+- Freeze authority: None
+- Decimals: 9
+
+
+### 2. Add Token Metadata (`spl_metadata.ts`)
+
+Adds Metaplex metadata to the token:
+- Name: "leo_kevred"
+- Symbol: "LKE"
+- URI: [https://gray-familiar-wombat-195.mypinata.cloud/ipfsbafkreiftaydfqgjhtgchpmdm6tzznp577wsgftzsjyttky5qt7mag5zmcy]
+- Seller fee: 0%
+
+
+### 3. Mint Tokens (`spl_mint.ts`)
+
+Mints 100 tokens to your Associated Token Account (ATA):
+- Creates ATA if it doesn't exist
+- Mints 100 tokens (100 * 10^9 base units)
+
+
+**Mint Transaction**: [`5rBBk2eAh3fH7QqAgUqnuyswdhgEY68zxYyG1aZ83aqVbkXmvvvPNSkRuA5Voh2LE2ktXT6sgyiJfJzbk32iUCAJ`](https://explorer.solana.com/tx/5rBBk2eAh3fH7QqAgUqnuyswdhgEY68zxYyG1aZ83aqVbkXmvvvPNSkRuA5Voh2LE2ktXT6sgyiJfJzbk32iUCAJ?cluster=devnet)
+
+### 4. Transfer Tokens (`spl_transfer.ts`)
+
+Transfers 10 tokens to another wallet:
+- Recipient: `8RYEWyZGhmUDqwuQNqdFEdti3U6AU1ggo3t8TurjHQsw`
+- Amount: 10 tokens (10 * 10^9 base units)
+- Creates recipient ATA if needed
+
+
+## Setup
+
+```bash
+cd ts
+npm install
+```
+
+## Dependencies
+
+- `@solana/web3.js` - Solana Web3 SDK
+- `@solana/spl-token` - SPL Token library
+- `@metaplex-foundation/mpl-token-metadata` - Metaplex metadata
+- `@metaplex-foundation/umi` - Metaplex UMI framework
+
+## Configuration
+
+Update the wallet path in each file to point to your Solana keypair
