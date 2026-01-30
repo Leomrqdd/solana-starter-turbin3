@@ -2,6 +2,8 @@
 
 Complete workflow for creating, minting, and transferring an SPL token on Solana Devnet.
 
+The same functionalities are also implemented in **Rust** (see `rs-test-spl/`) in addition to the TypeScript version described below.
+
 ## Token Information
 
 - **Name**: leo_kevred
